@@ -7,7 +7,7 @@ golButton.addEventListener("click", () => {
         container.id = "gol"
         container.innerHTML = `
             <div class="controlbar">
-                <img class="clickable" src="/img/x.svg" alt="close">
+                <img class="clickable" src="img/x.svg" alt="close">
             </div>
             <iframe src="GoL/index.html" frameborder="0" title="Game of Life" referrerpolicy="no-referrer"></iframe><br>
             <button class="button" onclick="document.querySelector('div#gol>iframe').contentWindow.location.reload();">
