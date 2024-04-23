@@ -1,0 +1,246 @@
+@import url('https://fonts.googleapis.com/css2?family=Gemunu+Libre&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Mono+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Borel&display=swap');
+:root {
+    /*background colors*/
+    --main-bg-colour: rgb(250, 250, 250);
+    --secondary-bg-colour: white;
+    /*font colors*/
+    --default-font-color: black;
+    --logo-color: var(--default-font-colors);
+    --navbar-links: rgb(22, 0, 148);
+    --navbar-links-hover: rgb(38, 0, 255);
+    /*buttons*/
+    --button-bg-colour: rgba(255, 255, 255, 0.25);
+    --button-clicked-colour: rgb(255, 255, 255);
+    --button-hover-colour: rgba(255, 255, 255, 0.75);
+    /*shadows*/
+    --container-shadow: 0px 5px 5px 0px rgba(0,0,0,0.25);
+    --title-shadow: 2px 2px rgba(255,255,255,0.5);
+    --description-shadow: 0 0 2px rgba(255,255,255,1);
+}
+body {
+    background-color: var(--main-bg-colour);
+    margin: 0;
+}
+ul {
+    padding: 0;
+}
+#navbar > ul {
+    margin: auto 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+#navbar > ul > li {
+    display: block;
+    margin: 0.5rem 1rem;
+}
+#navbar {
+    top: 0;
+    position: sticky;
+    font-family: "Gemunu Libre", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    z-index: 100;
+    background-color: var(--secondary-bg-colour);
+    box-shadow: var(--container-shadow);
+}
+#darkmode-switch {
+    display: fixed;
+    left: 0;
+    right: 0;
+}
+.nav-logo > a {
+    text-decoration: none;
+    color: var(--logo);
+}
+.nav-element > a {
+    text-decoration: none;
+    color: var(--navbar-links);
+}
+.nav-element > a:hover {
+    color: var(--navbar-links-hover);
+}
+
+.button{
+    padding: 0.5rem 2rem;
+    width: min-content;
+    margin: auto;
+    box-shadow: var(--container-shadow);
+    border-style: none;
+    border-radius: 0.3rem;
+    background-color: var(--button-bg-colour);
+    transition: all 0.4s;
+    cursor:pointer;
+    backdrop-filter: blur(5px);
+}
+
+.button:hover{
+    border-radius: 1rem;
+    background-color: var(--button-hover-colour);
+}
+.button:active{
+    border-radius: 1rem;
+    transform: scale(0.9);
+    box-shadow: none;
+    background-color: var(--button-clicked-colour);
+}
+
+
+#examples > ul > li {
+    display: block;
+    margin: 0.5rem 1rem;
+    max-width: 512px;
+}
+#examples > ul > li > .content{
+    position: relative;
+    text-align: center;
+    height:100%;
+    margin: 0;
+    padding: 0;
+    max-width: 512px;
+    overflow: hidden;
+}
+
+#examples > ul > li > .content > img{
+    height: 100%;
+    transition: all 0.4s;
+    filter: blur(0.2rem) saturate(0) ;
+}
+#examples > ul > li > .content:hover > img{
+    filter: none;
+}
+#examples > ul > li > .content > .preview{
+    position: absolute;
+    top: 0;
+}
+#examples > ul > li > .content > .preview > .preview-title{
+    position: relative;
+    padding: 0.5rem 2rem;
+    margin: auto;
+    left: 0;
+    right: 0;
+    top: 2rem;
+    font-size: 3rem;
+    font-family: "Rubik Mono One", monospace;
+    font-weight: 400;
+    font-style: normal;
+    text-shadow: var(--title-shadow);
+}
+#examples > ul > li > .content > .preview > .preview-description{
+    background-color: rgba(255,255,255,0.25);
+    position: relative;
+    padding: 0.5rem 2rem;
+    text-align: center;
+    margin: 2rem 2rem;
+    padding-top: 1rem;
+    font-size: 1.2rem;
+    font-family: "Borel", cursive;
+    font-weight: 500;
+    font-style: normal;
+    text-shadow: var(--description-shadow);
+    backdrop-filter: blur(0.4rem);
+    border-radius: 1rem;
+    transition: all 0.4s;
+}
+#examples > ul > li > .content:hover > .preview > .preview-description{
+    backdrop-filter: blur(0.2rem);
+}
+#examples > ul > li > div.content .button{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 2rem;
+}
+
+section {
+    margin-top: 5rem;
+}
+#gol {
+    position: fixed;
+    margin: 0;
+    z-index: 100;
+    left: 50%;
+    transform: translate(-50%, 0);
+    width: auto;
+    height: auto;
+    padding: 0.5rem;
+    overflow: hidden;
+    text-align: center;
+    background-color: white;
+    border-radius: 0.5rem;
+}
+#gol > iframe {
+    height: 250px;
+    width: 250px;
+}
+#gol > .controlbar {
+    display: flex;
+    justify-content: flex-end;
+}
+#gol > .controlbar > img{
+    width: 1rem;
+    height: auto;
+}
+.clickable {
+    cursor:pointer;
+}
+.grid {
+    text-align: center;
+    justify-content: center;
+    display: grid;
+    grid-auto-rows: minmax(256px, auto);
+    grid-auto-columns: auto;
+    gap: 2rem;
+}
+.grid > .grid-element {
+    background-color: var(--secondary-bg-colour);
+    border-radius: 0.25rem;
+    box-shadow: var(--container-shadow);
+}
+@media screen and (min-width: 1580px){
+    .grid > .grid-element:nth-child(3n - 2) {
+        grid-column: 1;
+    }
+    .grid > .grid-element:nth-child(3n - 1) {
+        grid-column: 2;
+    }
+    .grid > .grid-element:nth-child(3n) {
+        grid-column: 3;
+    }
+    .grid > .grid-element:nth-child(3) {
+        grid-column: 3;
+        grid-row: 1/3;
+    }
+}
+@media screen and (max-width: 1580px){
+    .grid > .grid-element:nth-child(2n - 1) {
+        grid-column: 1;
+    }
+    .grid > .grid-element:nth-child(2n) {
+        grid-column: 2;
+    }
+    .grid > .grid-element:nth-child(3) {
+        grid-column: 1;
+        grid-row: 2/4;
+    }
+    .grid > .grid-element:nth-child(5) {
+        grid-column: 2;
+    }
+}
+
+@media screen and (max-width: 1200px){
+    .nav-logo {
+        display: none!important;
+    }
+    .grid > .grid-element:nth-child(n) {
+        grid-column: 1;
+    }
+}
+footer {
+    color: var(--default-font-color);
+    text-align: center;
+}

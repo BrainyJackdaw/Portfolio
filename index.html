@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Personal Website</title>
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
+    <script src="js/pixi.min.js" defer></script>
+    <script src="js/pixi-filters.js" defer></script>
+    <script src="js/digital-crumble.js" defer></script>
+    <script src="js/main.js" defer></script>
+</head>
+<body>
+    <nav id="navbar" class="container">
+        <ul class ="flex">
+            <li class="nav-logo"><a href="/index.html"><h1>Artur Michalczyk</h1></li>
+            <li class="nav-element"><a href="/index.html">Home</a></li>
+            <li class="nav-element"><a href="/about.html">About</a></li>
+            <li class="nav-element"><a href="/services.html">Services</a></li>
+            <li class="nav-element"><a href="/contact.html">Contact</a></li>
+        </ul>
+        <!-- <div id="darkmode-switch">Uga Buga</li> -->
+    </nav>
+    <section>
+        <!-- <div id="gol">
+            <div class="controlbar">
+                <img class="clickable" src="/img/x.svg" alt="close">
+            </div>
+            <iframe src="/GoL/index.html" frameborder="0" title="Game of Life" referrerpolicy="no-referrer"></iframe><br>
+            <button class="button" onclick="document.querySelector('div#gol>iframe').contentWindow.location.reload();">
+                Refresh
+            </button>
+        </div> -->
+        <div id="examples">
+            <ul class="grid">
+                <li class="grid-element">
+                    <div class="content">
+                        <img src="img/gol.jpg" alt="Game of Life">
+                        <div class="preview">
+                            <div class="preview-title">
+                                Game of Life
+                            </div>
+                            <div class="preview-description">
+                                Conway's Game of Life is a zero-player cellular automaton where cells on a grid evolve through generations based on predefined rules of birth, death, and survival.
+                            </div>
+                        </div>
+                        <!-- <a href="GoL/index.html" target="_blank"> -->
+                            <button class="button" id="gol-button">
+                                Show
+                            </button>
+                        <!-- </a> -->
+                    </div>
+                </li>
+                <li class="grid-element">
+                    <div class="content">
+                        <img src="img/crumble.jpg" alt="Digital Crumble">
+                        <div class="preview">
+                            <div class="preview-title">
+                                Digital Crumble
+                            </div>
+                            <div class="preview-description">
+                                A Matrix inspired effect that can add a "computer" feeling to the website.
+                            </div>
+                        </div>
+                        <button class="button" id="surprise">
+                            Enable
+                        </button>
+                    </div>
+                </li>
+                <li class="grid-element">
+                    <div class="content">
+                        <img src="https://placehold.co/512x1024?text=Placeholder">
+                        <button class="button">
+                            Show
+                        </button>
+                    </div>
+                </li>
+                <li class="grid-element">
+                    <div class="content">
+                        <img src="https://placehold.co/512x512?text=Placeholder">
+                        <button class="button">
+                            Show
+                        </button>
+                    </div>
+                </li>
+                <li class="grid-element">
+                    <div class="content">
+                        <img src="https://placehold.co/512x512?text=Placeholder">
+                        <button class="button">
+                            Show
+                        </button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+    <footer>
+        <p>&copy; 2024 Artur Michalczyk. All Rights Reserved</p>
+    </footer>
+</body>
+</html>

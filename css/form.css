@@ -1,0 +1,52 @@
+@import url('/css/main.css');
+body > section {
+    padding: 2rem;
+    background-color: var(--secondary-bg-colour);
+    margin-left: 2rem;
+    margin-right: 2rem;
+    width: auto;
+    text-align: center;
+    
+}
+body > section > form > div {
+    margin: 1rem;
+}
+body > section > form > div > textarea{
+    border: none;
+    background-color: var(--main-bg-colour);
+    box-shadow: inset 0px 0px 5px 1px rgba(0, 0, 0,0.55);
+    border-radius: 0.5em;
+}
+#email {
+    border: none;
+    background-color: var(--main-bg-colour);
+    box-shadow: inset 0px 0px 2px 1px rgba(0, 0, 0,0.55);
+    border-radius: 0.5em;
+}
+body > section > form > div > textarea {
+    min-height: 200px;
+    min-width: 100px;
+    width: 400px;
+}
+
+#submit{
+    padding: 0.5rem 2rem;
+    margin: auto;
+    box-shadow: var(--container-shadow);
+    border-style: none;
+    border-radius: 0.3rem;
+    background-color: var(--button-bg-colour);
+    transition: all 0.4s;
+    cursor:pointer;
+}
+
+#submit:hover{
+    border-radius: 1rem;
+    background-color: var(--button-hover-colour);
+}
+#submit:active{
+    border-radius: 1rem;
+    transform: scale(0.9);
+    box-shadow: none;
+    background-color: var(--button-clicked-colour);
+}

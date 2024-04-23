@@ -1,0 +1,10 @@
+:root {
+    /*background colors*/
+    --main-bg-colour: rgb(30, 30, 30);
+    --secondary-bg-colour: rgb(20, 20, 20);
+    /*font colors*/
+    --default-font-color: rgb(255, 255, 255);
+    --logo-color: var(--default-font-colors);
+    --navbar-links: rgb(0, 130, 206);
+    --navbar-links-hover: rgb(55, 167, 231);
+}
